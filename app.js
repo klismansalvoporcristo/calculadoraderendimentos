@@ -1,4 +1,6 @@
-
+window.onload = function alertabvd() {
+    alert("Bem-vindo à calculadora de rendimentos. Projeto desenvolvido por KLÍSMAN SALVOPORCRISTO PEREIRA DA SILVA.")
+}
 
 function calcular(){
     var moagem = document.getElementById("moagem").value;
