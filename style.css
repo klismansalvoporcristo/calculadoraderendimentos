@@ -137,3 +137,22 @@ h3{
     text-align: center;
     justify-content: center;
 }
+
+
+@media (max-width: 768px) {
+  .containerflex {
+    flex-direction: column;
+  }
+  .containerflex .resultados{
+    width: 100%;
+  }
+  .containerflex .totalizadores{
+    width: 100%;
+  }
+  body{
+    height: 100%;
+  }
+  p{
+    margin: 15px;
+  }
+}
