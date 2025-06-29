@@ -13,12 +13,15 @@ body{
     width: 100vw;
     height: 100vh;
     padding: 30px 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main{
     background-color: var(--cor-primaria);
-    height: 100%;
-    width: 100%;
+    height: 95%;
+    width: 95%;
     color: var(--cor-primaria);   
     display: flex;
     justify-content: center;
@@ -37,20 +40,79 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-}
-.input{
-    width: 100%;   
-}
-input{
-    padding:20px;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-    width: 100%;
 }
 
+.containerflex{
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%; 
+     height: 100%;
+}
+.containerflex .totalizadores{
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.containerflex .totalizadores .input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.containerflex .totalizadores .input input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.containerflex .resultados{
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    color: var(--cor-primaria);
+    padding: 15px;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 10px;
+}
+
+.corrigido{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;  
+     height: 110px;
+     border-bottom: 1px solid var(--cor-primaria); 
+     margin-bottom: 20px;    
+}
+
+.corrigido .input{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+.corrigido .input p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.corrigido .input input{
+    border: none;
+    color: var(--cor-secundaria);
+    padding: 15px;
+    background-color: var(--cor-primaria);
+    border-radius: 10px;
+}
 
 .btn{
     padding: 20px;
@@ -64,17 +126,14 @@ input{
 
 .btn:hover{
     background-color: var(rgb(102, 102, 118));
-}
-
-.rendimento{
-    width: 100%;
-    background-color: var(--cor-secundaria);
-    padding: 15px;
-    border-top: 1px solid var(--cor-primaria);
-    border-bottom: 1px solid var(--cor-primaria);
     color: var(--cor-primaria);
-    font-family: Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+}
+h3{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
 }

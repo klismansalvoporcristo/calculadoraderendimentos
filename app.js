@@ -14,6 +14,7 @@ function calcular(){
     var rendetanol = (anidro/moagemcor)*1000
     var rendddgs = ddgs/(vinho/(mosto/moagemcor))*1000
 
+    document.getElementById("moagemcorrigida").innerText="MOAGEM CORRIGIDA : "+moagemcor.toFixed(3)
     document.getElementById("rendimentoetn").innerText="RENDIMENTO DO ETANOL : "+rendetanol.toFixed(3)
     document.getElementById("rendimentodd").innerText="RENDIMENTO DO DDGS : "+rendddgs.toFixed(3) 
 }

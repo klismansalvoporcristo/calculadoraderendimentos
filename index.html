@@ -9,30 +9,40 @@
 <body>
     <div class="main">
         <div class="container">
-            <div class="input">
-                <input type="number" id="moagem" name="tot-moagem" placeholder="TOTALIZADOR DA MOAGEM">
+            <div class="corrigido">
+                <div class="input">
+                    <p>Digite o totalizador da moagem</p>
+                    <input type="number" id="moagem" name="tot-moagem" placeholder="00">
+                </div>
+                <div class="input">
+                    <p>Digite a média da umidade</p>
+                    <input type="number" id="umidade" name="umidade" placeholder="00">
+                </div>
             </div>
-            <div class="input">
-                <input type="number" id="umidade" name="umidade" placeholder="MÉDIA DA UMIDADE">
-            </div>
-            <div class="input">
-                <input type="number" id="anidro" name="tot-etanol" placeholder="TOTALIZADOR DE ETANOL ANIDRO">
-            </div>
-            <div class="input">
-                <input type="number" id="ddgs" name="tot-ddgs" placeholder="TOTALIZADOR DE DDGS">
-            </div>
-            <div class="input">
-                <input type="number" id="mosto" name="tot-mosto" placeholder="TOTALIZADOR DO MOSTO">
-            </div>
-            <div class="input">
-                <input type="number" id="vinho" name="tot-vinho" placeholder="TOTALIZADOR DO VINHO">
-            </div>
-            <div class="input">
-                <button class="btn" onclick="calcular()">CALCULAR</button>
-            </div>
-            <div class="rendimento">
-                <p id="rendimentoetn">RENDIMENTO DO ETANOL : </p>
-                <p id="rendimentodd"> RENDIMENTO DO DDGS : </p>
+            <div class="containerflex">
+                <div class="totalizadores">
+                    <div class="input">
+                        <input type="number" id="anidro" name="tot-etanol" placeholder="TOTALIZADOR DE ETANOL ANIDRO">
+                    </div>
+                    <div class="input">
+                        <input type="number" id="ddgs" name="tot-ddgs" placeholder="TOTALIZADOR DE DDGS">
+                    </div>
+                    <div class="input">
+                        <input type="number" id="mosto" name="tot-mosto" placeholder="TOTALIZADOR DO MOSTO">
+                    </div>
+                    <div class="input">
+                        <input type="number" id="vinho" name="tot-vinho" placeholder="TOTALIZADOR DO VINHO">
+                    </div>
+                    <div class="input">
+                        <button class="btn" onclick="calcular()">CALCULAR</button>
+                    </div>
+                </div>
+                <div class="resultados">
+                        <h3>RESULTADOS</h3>
+                        <p id="moagemcorrigida"> MOAGEM CORRIGIDA : </p>                     
+                        <p id="rendimentoetn">RENDIMENTO DO ETANOL : </p>
+                        <p id="rendimentodd"> RENDIMENTO DO DDGS : </p>
+                </div>
             </div>
         </div>
     </div>   
