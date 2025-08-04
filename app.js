@@ -1,5 +1,33 @@
-window.onload = function alertabvd() {
-    alert("Bem-vindo à calculadora de rendimentos. Projeto desenvolvido por KLÍSMAN SALVOPORCRISTO PEREIRA DA SILVA.")
+window.onload = function () {
+    mostrarMensagemBoasVindas();
+};
+
+function mostrarMensagemBoasVindas() {
+  const mensagem = document.createElement("div");
+  mensagem.id = "mensagemBoasVindas";
+  mensagem.innerHTML = `
+    <span class="texto">🚀 Bem-vindo à calculadora de rendimentos! Projeto desenvolvido por <strong>KLÍSMAN SALVOPORCRISTO</strong>.</span>
+    <button id="fecharMensagem">&times;</button>
+  `;
+  document.body.appendChild(mensagem);
+
+  document.getElementById("fecharMensagem").onclick = () => {
+    fecharMensagem();
+  };
+
+  setTimeout(() => {
+    fecharMensagem();
+  }, 5000);
+}
+
+function fecharMensagem() {
+  const mensagem = document.getElementById("mensagemBoasVindas");
+  if (mensagem) {
+    mensagem.classList.add("esconder");
+    setTimeout(() => {
+      mensagem.remove();
+    }, 500);
+  }
 }
 
 function calcular(){

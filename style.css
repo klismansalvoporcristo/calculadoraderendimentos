@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,7 +8,8 @@
   --cor-primaria: #062539;
   --cor-secundaria: #ffffff;
 }
-body{
+
+body {
     background-color: var(--cor-primaria);
     width: 100vw;
     height: 100vh;
@@ -18,7 +19,7 @@ body{
     align-items: center;
 }
 
-.main{
+.main {
     background-color: var(--cor-primaria);
     height: 95%;
     width: 95%;
@@ -26,7 +27,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     flex-direction: column;
 }
 
@@ -42,14 +42,15 @@ body{
     align-items: center;
 }
 
-.containerflex{
+.containerflex {
     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     width: 100%; 
-     height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    height: 100%;
 }
-.containerflex .totalizadores{
+
+.containerflex .totalizadores {
     width: 63%;
     display: flex;
     flex-direction: column;
@@ -57,21 +58,21 @@ body{
     justify-content: space-evenly;
 }
 
-.containerflex .totalizadores .input{
+.containerflex .totalizadores .input {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 15px;
 }
 
-.containerflex .totalizadores .input input{
+.containerflex .totalizadores .input input {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 15px;
 }
 
-.containerflex .resultados{
+.containerflex .resultados {
     width: 37%;
     display: flex;
     flex-direction: column;
@@ -83,7 +84,7 @@ body{
     border-radius: 10px;
 }
 
-.corrigido{
+.corrigido {
      display: flex;
      justify-content: center;
      align-items: center;
@@ -93,7 +94,7 @@ body{
      margin-bottom: 20px;    
 }
 
-.corrigido .input{
+.corrigido .input {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -101,12 +102,12 @@ body{
     margin-bottom: 5px;
 }
 
-.corrigido .input p{
+.corrigido .input p {
     text-align: center;
     margin-bottom: 5px;
 }
 
-.corrigido .input input{
+.corrigido .input input {
     border: none;
     color: var(--cor-secundaria);
     padding: 15px;
@@ -114,21 +115,21 @@ body{
     border-radius: 10px;
 }
 
-.btn{
+.btn {
     padding: 20px;
     width: 100%;
     border-radius: 10px;
     border: 1px solid var(--cor-primaria);
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
-    
 }
 
-.btn:hover{
-    background-color: var(rgb(102, 102, 118));
+.btn:hover {
+    background-color: #666;
     color: var(--cor-primaria);
 }
-h3{
+
+h3 {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     padding: 15px;
@@ -138,33 +139,89 @@ h3{
     justify-content: center;
 }
 
-
 @media (max-width: 768px) {
   .containerflex {
     flex-direction: column;
   }
-  .containerflex .resultados{
+  .containerflex .resultados,
+  .containerflex .totalizadores {
     width: 100%;
   }
-  .containerflex .totalizadores{
-    width: 100%;
-  }
-  body{
+  body {
     height: 100%;
   }
-  p{
+  p {
     width: 100%;
     margin: 15px;
     font-size: 17px;
   }
-  .corrigido{
+  .corrigido {
     flex-direction: column;
     height: auto;
     width: 100%;
   }
-  .corrigido .input{
+  .corrigido .input {
     height: 100%;
     width: 100%;
   }
-  
+}
+
+#mensagemBoasVindas {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4f46e5;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease;
+  max-width: 90%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#mensagemBoasVindas .texto {
+  flex: 1;
+}
+
+#mensagemBoasVindas button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+#mensagemBoasVindas.esconder {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
 }
